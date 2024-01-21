@@ -1,9 +1,15 @@
-import Image from 'next/image'
+import About from "./components/About";
+import List from "./components/List";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
+    <main className="min-h-screen text-[var(--text-color)]">
+      <NavBar></NavBar>
+      <About></About>
+      <List></List>
+      <Footer></Footer>
     </main>
   )
 }

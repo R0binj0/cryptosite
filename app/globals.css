@@ -3,25 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --main-color: #010010;
+    --text-color: #FFFFFF;
+    --special-color: #73FDAA;
+    --special-button: #BBFFFF;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.orb {
+    animation: spin 15s linear infinite;
+    z-index: -10;
+    width: 1px;
+    height: 1px;
+    background-color: transparent;
+    border-radius: 100%;
+    box-shadow:40px 40px 100px 100px var(--special-color);
+    opacity: 0.5;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
 }
+
+
